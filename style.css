@@ -18,3 +18,38 @@ p {
     color: #6A859C;
     line-height: 1.8; /* для масштабируемости */
 }
+
+.main-header {
+}
+
+.container {
+}
+
+.logo {
+    font-size: 25px;
+    line-height: 100%;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #69b9ff;
+}
+
+.main-header-nav {
+}
+
+.main-header-nav a {
+    font-size: 16px;
+    line-height: 125%;
+    color: #676770;
+
+    transition: color 0.2s;
+}
+
+.main-header-nav a:hover {
+    font-size: 15px;
+    line-height: 133%;
+    color: #0082f3;
+}
+
+.main-header-nav a:active { /* плагин для Figma Color Compass, разбор в видеоролике. */
+    color: #0065BD;
+}

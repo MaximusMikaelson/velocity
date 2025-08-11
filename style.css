@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* общие стили */
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* потому чо font facia показала regular */
+}
+
+.container {
+    /* не 940, а 970 из-за box-sizing border box */
+    max-width: 970px; /* ограничивает ширину элементов */
+    padding: 0 15px;
+    margin: 0 auto; /* центрируем по горизонтали */
+}
+
+p {
+    color: #6A859C;
+    line-height: 1.8; /* для масштабируемости */
 }

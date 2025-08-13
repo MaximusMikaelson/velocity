@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* общие стили */
+/* ОБЩИЕ СТИЛИ */
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* потому чо font facia показала regular */
 }
-
 .container {
     /* не 940, а 970 из-за box-sizing border box */
     max-width: 970px; /* ограничивает ширину элементов */
@@ -19,10 +18,18 @@ p {
     line-height: 1.8; /* для масштабируемости */
 }
 
+/* СТИЛИ ДЛЯ HEADER */
+
 .main-header {
+    padding: 20px 0;
+
 }
 
-.container {
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -33,7 +40,12 @@ p {
     color: #69b9ff;
 }
 
-.main-header-nav {
+.main-header-nav ul {
+    display: flex;
+}
+
+.main-header-nav li + li { /* li + li объясняется в видеоролике */
+    margin-left: 40px;
 }
 
 .main-header-nav a {
@@ -52,4 +64,21 @@ p {
 
 .main-header-nav a:active { /* плагин для Figma Color Compass, разбор в видеоролике. */
     color: #0065BD;
+}
+
+/* СТИЛИ ДЛЯ MAIN */
+
+.page-main {
+}
+.welcome {
+}
+.container {
+}
+.welcome__heading {
+}
+.welcome__links {
+}
+.link__primary {
+}
+.link {
 }

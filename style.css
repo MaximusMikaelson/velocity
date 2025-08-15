@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* ОБЩИЕ СТИЛИ */
+/* --------- ОБЩИЕ СТИЛИ --------- */
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* потому чо font facia показала regular */
 }
+
 .container {
     /* не 940, а 970 из-за box-sizing border box */
     max-width: 970px; /* ограничивает ширину элементов */
@@ -18,15 +19,22 @@ p {
     line-height: 1.8; /* для масштабируемости */
 }
 
-/* СТИЛИ ДЛЯ HEADER */
+/* --------- СТИЛИ ДЛЯ HEADER --------- */
 
 .main-header {
     padding: 20px 0;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    background-color: #fff;
 }
 
 
-.header__container {
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,19 +74,149 @@ p {
     color: #0065BD;
 }
 
-/* СТИЛИ ДЛЯ MAIN */
+/* --------- СТИЛИ ДЛЯ MAIN --------- */
 
-.page-main {
-}
 .welcome {
+    min-height: 600px; /* из макета, значение примерное, округлённое */
+    height: 100vh; 
+    color: #FFFFFF;
+    padding: 195px 250px;
+
+    display: flex;
+    flex-direction: column; /* элементы идут сверху вниз */
+    align-items: center;    /* выравнивание по горизонтали */
+    justify-content: center; /* выравнивание по вертикали */
+    min-height: 100vh;       /* секция занимает весь экран по высоте */
+    text-align: center;
+
+     /* на тот случай, если картинка не загружается.
+        метод пипетки. см. velocity #2:40 */
+    background-color: #1B1C1F;
+    background-image: url(img/welcome.png);
+    background-size: cover;
+    background-position: center;
 }
-.container {
+
+.welcome-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.welcome__heading {
+
+.welcome-heading {
+    margin-bottom: 100px;
+
+    font-size: 59px;
+    line-height: 102%;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #fff;
 }
-.welcome__links {
+.welcome-links > * + * { /* внутри w.l. и есть предыдущий сосед */
+    margin-left: 20px;
 }
-.link__primary {
+
+.link-primary {
+    padding: 10px 30px;
+    width: 138px;
+    height: 43px; /* необходимо подогнать выстоту, чтобы она была одинаковой
+    у обеих кнопок */
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 131%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+
+    background-color: #69B9FF;
 }
+
+.link-primary:hover {
+    background-color: #7AC1FF;
+}
+
+.link-primary:active {
+    background-color: #1994FF;
+}
+
 .link {
+    display: inline-block; /* пока что вообще непонятно */
+    padding: 10px 30px;
+
+    font-size: 16px;
+    line-height: 131%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+
+    /* добавляем рамку: в фигме щелкаем по рамке + inspect styles */
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 183px;
+    height: 43px;  
+}
+
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.link:active {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --------- ABOUT WHAT WE DO --------- */
+
+.about .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.common-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.title-wrapper {
+    margin-bottom: 60px;
+}
+
+.title {
+    margin-bottom: 17px; /* разобрался, почему так. действует на все несколько тайтлов */
+
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: #676770;
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 118%;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #8e8e9c;
+}
+
+.about .card {
+    width: 300px;
+    height: 291px;
+    padding: 35px 15px 20px 15px;
+
+    border: 1px solid #dcebf7;
+    border-radius: 5px;
+}
+
+.about .card img {
+    margin-bottom: 20px;
+    
+    width: 94px; /* вдруг, если кто-то загрузит картинку больше, чтобы она
+    не разъехалась. */
+    height: 94px;
+    object-fit: contain; /* разобраться */
 }

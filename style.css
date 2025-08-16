@@ -1,10 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 /* --------- ОБЩИЕ СТИЛИ --------- */
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400; /* потому чо font facia показала regular */
+}
+
+.common-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.common-section--dark {
+    background-color: #192024;
+}
+
+.common-section--dark * {
+    color: #fff;
+}
+
+.common-section--dark .title {
+    color: #fff;
+}
+
+.common-section--dark .subtitle {
+    color: #e8e8e8;
 }
 
 .container {
@@ -15,13 +36,13 @@ body {
 }
 
 p {
-    color: #6A859C;
+    color: #6a859c;
     line-height: 1.8; /* для масштабируемости */
 }
 
 /* --------- СТИЛИ ДЛЯ HEADER --------- */
 
-.main-header {
+.homepage-header {
     padding: 20px 0;
 
     position: fixed;
@@ -31,8 +52,9 @@ p {
     z-index: 100;
 
     background-color: #fff;
-}
 
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
 
 .header-container {
     display: flex;
@@ -48,15 +70,16 @@ p {
     color: #69b9ff;
 }
 
-.main-header-nav ul {
+.homepage-header-nav ul {
     display: flex;
 }
 
-.main-header-nav li + li { /* li + li объясняется в видеоролике */
+.homepage-header-nav li + li {
+    /* li + li объясняется в видеоролике */
     margin-left: 40px;
 }
 
-.main-header-nav a {
+.homepage-header-nav a {
     font-size: 16px;
     line-height: 125%;
     color: #676770;
@@ -64,34 +87,35 @@ p {
     transition: color 0.2s;
 }
 
-.main-header-nav a:hover {
+.homepage-header-nav a:hover {
     font-size: 15px;
     line-height: 133%;
     color: #0082f3;
 }
 
-.main-header-nav a:active { /* плагин для Figma Color Compass, разбор в видеоролике. */
-    color: #0065BD;
+.homepage-header-nav a:active {
+    /* плагин для Figma Color Compass, разбор в видеоролике. */
+    color: #0065bd;
 }
 
 /* --------- СТИЛИ ДЛЯ MAIN --------- */
 
 .welcome {
     min-height: 600px; /* из макета, значение примерное, округлённое */
-    height: 100vh; 
-    color: #FFFFFF;
+    height: 100vh;
+    color: #ffffff;
     padding: 195px 250px;
 
     display: flex;
     flex-direction: column; /* элементы идут сверху вниз */
-    align-items: center;    /* выравнивание по горизонтали */
+    align-items: center; /* выравнивание по горизонтали */
     justify-content: center; /* выравнивание по вертикали */
-    min-height: 100vh;       /* секция занимает весь экран по высоте */
+    min-height: 100vh; /* секция занимает весь экран по высоте */
     text-align: center;
 
-     /* на тот случай, если картинка не загружается.
+    /* на тот случай, если картинка не загружается.
         метод пипетки. см. velocity #2:40 */
-    background-color: #1B1C1F;
+    background-color: #1b1c1f;
     background-image: url(img/welcome.png);
     background-size: cover;
     background-position: center;
@@ -113,7 +137,8 @@ p {
     text-transform: uppercase;
     color: #fff;
 }
-.welcome-links > * + * { /* внутри w.l. и есть предыдущий сосед */
+.welcome-links > * + * {
+    /* внутри w.l. и есть предыдущий сосед */
     margin-left: 20px;
 }
 
@@ -130,15 +155,15 @@ p {
     text-transform: uppercase;
     color: #fff;
 
-    background-color: #69B9FF;
+    background-color: #69b9ff;
 }
 
 .link-primary:hover {
-    background-color: #7AC1FF;
+    background-color: #7ac1ff;
 }
 
 .link-primary:active {
-    background-color: #1994FF;
+    background-color: #1994ff;
 }
 
 .link {
@@ -155,7 +180,7 @@ p {
     border: 1px solid #fff;
     border-radius: 4px;
     width: 183px;
-    height: 43px;  
+    height: 43px;
 }
 
 .link:hover {
@@ -171,11 +196,6 @@ p {
 .about .cards-wrapper {
     display: flex;
     justify-content: space-between;
-}
-
-.common-section {
-    padding: 80px 0;
-    text-align: center;
 }
 
 .title-wrapper {
@@ -214,9 +234,109 @@ p {
 
 .about .card img {
     margin-bottom: 20px;
-    
+
     width: 94px; /* вдруг, если кто-то загрузит картинку больше, чтобы она
     не разъехалась. */
     height: 94px;
     object-fit: contain; /* разобраться */
 }
+
+.about .card h4 {
+    margin-bottom: 15px;
+
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #676770;
+}
+
+.services {
+}
+
+.services .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .card {
+    width: 45%; /* ??? */
+}
+
+.services .card img {
+    margin-bottom: 20px;
+}
+
+.services .card h4 {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+.services .link {
+    margin-top: 15px;
+}
+
+/* --------- TAB SECTION --------- */
+
+.tab-section {
+}
+.common-section {
+}
+.container {
+}
+.title-wrapper {
+}
+.title {
+}
+.subtitle {
+}
+.tabs {
+}
+.tabs__nav {
+    margin-bottom: 50px;
+}
+
+.tabs__nav button {
+    padding: 1px 30px;
+
+    font-size: 16px;
+    line-height: 131%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+
+    border-radius: 4px;
+    width: 196px;
+    height: 21px;
+    background: #92a0ad;
+}
+
+.tabs-nav button.active {
+    background: #2e80b6;
+}
+
+.tabs-nav button + button {
+    margin-left: 15px;
+}
+
+.tabs__item img {
+    margin-bottom: 15px;
+}
+
+.tabs__item h4 {
+    margin-bottom: 15px;
+
+    font-size: 31px;
+    line-height: 116%;
+    color: #676770;
+}
+
+.tabs__desc {
+}
+
+/* то расширение читается как экстрактран (для CSS) */
+/* &nbsp; - неразрывный пробел */

@@ -336,6 +336,64 @@ p {
 }
 
 .tabs__desc {
+    max-width: 720px; /* ??? */
+    margin: 0 auto;
+}
+
+/* --------- FOOTER --------- */
+
+.homepage-footer {
+}
+
+.footer__desc h4 {
+    font-size: 18px;
+    line-height: 111%;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #676770;
+}
+
+.footer__desk a {
+    font-size: 13px;
+    line-height: 154%;
+    color: #668cad;
+}
+
+.footer__desk-container {
+    display: flex;
+    width: 100%; /* обязательно, без этого разделение на 3 равных части не сработает */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer__about {
+    flex: 1;
+}
+
+.footer__about p {
+    font-size: 14px;
+    line-height: 179%;
+    color: #6a859c;
+}
+
+.footer__about h4 {
+    margin-bottom: 25px;
+}
+
+.footer__links {
+    flex: 1;
+}
+.footer-social {
+    flex: 1;
+}
+
+.footer-social img {
+    width: 20px; /* явно задаём размеры img, потому что картинки заказчик может загрузить другие */
+    height: 20px;
+    object-fit: contain; /* ??? */
+}
+
+.footer__copy {
 }
 
 /* то расширение читается как экстрактран (для CSS) */

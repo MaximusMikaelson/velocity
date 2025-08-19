@@ -195,7 +195,9 @@ p {
 
 .about .cards-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* ??? */
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .title-wrapper {
@@ -251,9 +253,6 @@ p {
     color: #676770;
 }
 
-.services {
-}
-
 .services .cards-wrapper {
     display: flex;
     justify-content: space-between;
@@ -282,20 +281,6 @@ p {
 
 /* --------- TAB SECTION --------- */
 
-.tab-section {
-}
-.common-section {
-}
-.container {
-}
-.title-wrapper {
-}
-.title {
-}
-.subtitle {
-}
-.tabs {
-}
 .tabs__nav {
     margin-bottom: 50px;
 }
@@ -315,11 +300,11 @@ p {
     background: #92a0ad;
 }
 
-.tabs-nav button.active {
+.tabs__nav button.active {
     background: #2e80b6;
 }
 
-.tabs-nav button + button {
+.tabs__nav button + button {
     margin-left: 15px;
 }
 

@@ -44,7 +44,6 @@ p {
 
 .homepage-header {
     padding: 20px 0;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -100,11 +99,17 @@ p {
 
 /* --------- СТИЛИ ДЛЯ MAIN --------- */
 
+.homepage-main {
+    max-width: 100%;
+}
+
 .welcome {
-    min-height: 600px; /* из макета, значение примерное, округлённое */
+    /*min-height: 600px; /* из макета, значение примерное, округлённое */
+    width: 100%;
     height: 100vh;
     color: #ffffff;
-    padding: 195px 250px;
+    /*padding: 195px 250px;*/
+    overflow: hidden;
 
     display: flex;
     flex-direction: column; /* элементы идут сверху вниз */
@@ -116,8 +121,10 @@ p {
     /* на тот случай, если картинка не загружается.
         метод пипетки. см. velocity #2:40 */
     background-color: #1b1c1f;
+
     background-image: url(img/welcome.png);
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
 }
 
@@ -423,6 +430,24 @@ p {
 .footer__copy p {
     text-align: center;
     color: #9e9e9e;
+}
+
+@media (max-width: 400px) {
+    .homepage-header-nav li + li {
+        margin-left: 15px;
+    }
+    .welcome-heading {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    .welcome-links a {
+        display: block;
+    }
+    .welcome-links > * + * {
+        /* ??? */
+        margin: 0;
+        margin-top: 20px;
+    }
 }
 
 /* то расширение читается как экстрактран (для CSS) */

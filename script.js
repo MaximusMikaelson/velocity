@@ -28,21 +28,28 @@ tabsBtns.forEach((btn, i) =>
     })
 );
 
-// anchors smooth scroll
-/*const anchors = document.querySelectorAll("header__nav a");
+function enableSmoothScroll() {
+    const anchors = document.querySelectorAll('a[href^="#"]');
 
-anchors.forEach((anchor) => {
-    anchor.addEventListener("click", (e) => {
-        e.preventDefault();
+    anchors.forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault(); // отменяем рывок
 
-        const blockID = anchor.getAttribute("href").substr(1);
+            const id = anchor.getAttribute("href").slice(1); // убираем #
+            const target = document.getElementById(id);
 
-        document.getElementById(blockID).scrollIntoView({
-            behavior: "smooth",
-            block: "start",
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                });
+            }
         });
     });
-});*/
+}
+
+// Включаем
+enableSmoothScroll();
 
 // show first tab by default
 hideTabs();

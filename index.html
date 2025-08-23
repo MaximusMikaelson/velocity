@@ -15,14 +15,16 @@
 
                 <nav class="homepage-header-nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#main">Home</a></li>
+                        <!-- якорь для скрипта -->
+                        <li><a href="#footer">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
-        <main class="homepage-main">
+        <main class="homepage-main" id="main">
+            <!-- id для скрипта -->
             <section class="welcome">
                 <h2 class="welcome-heading">This is velocity</h2>
 
@@ -136,25 +138,55 @@
                         </div>
 
                         <div class="tabs__item">
-                            <img src="img/image.jpg" alt="image" />
+                            <img src="img/tab-img-1.jpg" alt="image" />
                             <h4>Some Title Here</h4>
                             <div class="tabs__descr"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse varius enim in eros
+                                elementum tristique. Duis cursus, mi quis
+                                viverra ornare, eros dolor interdum nulla, ut
+                                commodo diam libero vitae erat. Aenean faucibus
+                                nibh et justo cursus id rutrum lorem imperdiet.
+                                Nunc ut sem vitae risus tristique posuere.
+                            </p>
                         </div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Suspendisse varius enim in eros elementum
-                            tristique. Duis cursus, mi quis viverra ornare, eros
-                            dolor interdum nulla, ut commodo diam libero vitae
-                            erat. Aenean faucibus nibh et justo cursus id rutrum
-                            lorem imperdiet. Nunc ut sem vitae risus tristique
-                            posuere.
-                        </p>
+
+                        <div class="tabs__item">
+                            <img src="img/tab-img-2.jpg" alt="image" />
+                            <h4>Some Title Here</h4>
+                            <div class="tabs__descr"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse varius enim in eros
+                                elementum tristique. Duis cursus, mi quis
+                                viverra ornare, eros dolor interdum nulla, ut
+                                commodo diam libero vitae erat. Aenean faucibus
+                                nibh et justo cursus id rutrum lorem imperdiet.
+                                Nunc ut sem vitae risus tristique posuere.
+                            </p>
+                        </div>
+
+                        <div class="tabs__item">
+                            <img src="img/tab-img-3.jpg" alt="image" />
+                            <h4>Some Title Here</h4>
+                            <div class="tabs__descr"></div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit. Suspendisse varius enim in eros
+                                elementum tristique. Duis cursus, mi quis
+                                viverra ornare, eros dolor interdum nulla, ut
+                                commodo diam libero vitae erat. Aenean faucibus
+                                nibh et justo cursus id rutrum lorem imperdiet.
+                                Nunc ut sem vitae risus tristique posuere.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer class="homepage-footer">
+        <footer class="homepage-footer" id="footer">
             <div class="footer__descr">
                 <div class="container footer__descr-container">
                     <!-- второй класс вспомогательный -->
@@ -214,5 +246,7 @@
                 <p>Copyright Velocity Inc. Made in Webflow.</p>
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
